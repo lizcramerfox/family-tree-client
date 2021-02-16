@@ -25,7 +25,7 @@ class Person extends Component {
         <h2>{prefName} {lastName}</h2>
         <h5>born: {birthName}</h5>
         <p>b. {birthMonth}/{birthDay}/{birthYear} - {birthCity}, {birthState}, {birthCountry}</p>
-        <p>d. {birthMonth}/{birthDay}/{birthYear} - {deathCity}, {deathState}, {deathCountry}</p>
+        <p>d. {deathMonth}/{deathDay}/{deathYear} - {deathCity}, {deathState}, {deathCountry}</p>
       </div>
     )
   }   

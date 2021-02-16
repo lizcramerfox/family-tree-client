@@ -1,4 +1,5 @@
-import Tree from './tree'
+import Tree from './tree';
+import data from './data';
 import './App.css';
 
 function App() {
@@ -6,10 +7,12 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h2>Family Tree</h2>
-        <Tree/>
       </header>
+      <main>
+        <Tree data={data} />
+      </main>
     </div>
-  );
-}
+  )
+};
 
 export default App;

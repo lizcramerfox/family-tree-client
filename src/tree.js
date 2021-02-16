@@ -1,13 +1,20 @@
 import React, { Component } from 'react'
+import Person from './person'
+
+
+
 
 class Tree extends Component {
+
   render () {
-    return (
-      <div>   
-        <span>Last Name, </span>
-        <span>First Name</span>
-      </div>
+    let treeJsx
+
+    treeJsx = (
+      this.props.data.map(person => (
+        <Person key={person.id} person={person} />
+      ))
     )
+    return treeJsx
   }
 }
 

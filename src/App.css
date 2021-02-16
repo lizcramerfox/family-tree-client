@@ -15,7 +15,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,4 +35,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.person-profile {
+  background: #282c34;
+  color: lightblue;
+  padding: .5rem 1rem 1rem;
+  margin: 1rem;
 }

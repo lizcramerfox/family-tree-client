@@ -9,7 +9,7 @@ function App() {
         <h2>Family Tree</h2>
       </header>
       <main>
-        <Tree data={data} />
+        <Tree people={data} />
       </main>
     </div>
   )

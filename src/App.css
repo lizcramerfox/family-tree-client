@@ -24,23 +24,20 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+.gen-0 {
+  display: flex;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
+.gen-1 {
+  display: flex;
+  justify-content: center;}
 
 .person-profile {
   background: #282c34;
   color: lightblue;
   padding: .5rem 1rem 1rem;
   margin: 1rem;
+  width: 15vw;
 }

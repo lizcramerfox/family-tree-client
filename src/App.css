@@ -25,14 +25,10 @@
 }
 
 
-.gen-0 {
+.generation{
   display: flex;
   justify-content: center;
 }
-
-.gen-1 {
-  display: flex;
-  justify-content: center;}
 
 .person-profile {
   background: #282c34;

@@ -20,6 +20,7 @@ const data = [
     deathState: 'NY',
     deathCountry: 'USA',
     generation: 0,
+    photo: 'https://i.imgur.com/fl4BbV3.jpg',
   },
 
   {
@@ -43,6 +44,7 @@ const data = [
     deathState: 'NY',
     deathCountry: 'USA',
     generation: 0,
+    photo: 'https://i.imgur.com/g0HTU1m.jpg',
   },
 
   {
@@ -66,6 +68,7 @@ const data = [
     deathState: 'NY',
     deathCountry: 'USA',
     generation: 1,
+    photo: 'https://i.imgur.com/IHjedHF.jpg',
   },
 
   {
@@ -89,6 +92,7 @@ const data = [
     deathState: 'NY',
     deathCountry: 'USA',
     generation: 1,
+    photo: 'https://i.imgur.com/cjOrv6b.jpg',
   },
 
   {
@@ -112,6 +116,7 @@ const data = [
     deathState: 'NY',
     deathCountry: 'USA',
     generation: 1,
+    photo: 'https://i.imgur.com/fgoCeLI.jpg',
   },
 
   {
@@ -135,6 +140,7 @@ const data = [
     deathState: 'NY',
     deathCountry: 'USA',
     generation: 1,
+    photo: 'https://i.imgur.com/3yu0vzJ.jpg',
   },
 
   {
@@ -158,6 +164,7 @@ const data = [
     deathState: 'FL',
     deathCountry: 'USA',
     generation: 1,
+    photo: 'https://i.imgur.com/aZgrRZL.jpg',
   },
 
   {
@@ -181,6 +188,7 @@ const data = [
     deathState: 'MA',
     deathCountry: 'USA',
     generation: 1,
+    photo: 'https://i.imgur.com/HLY8jmr.jpg',
   },
 
   {
@@ -204,6 +212,7 @@ const data = [
     deathState: 'NY',
     deathCountry: 'USA',
     generation: 1,
+    photo: 'https://i.imgur.com/0KE3oZe.jpg',
   }
 ]
 

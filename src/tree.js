@@ -24,11 +24,10 @@ class Tree extends Component {
 
     const treeJsx = (
       <div className="tree">
-        <div className="gen-0">{gen0}</div>
-        <div className="gen-1">{gen1}</div>
+        <div className="generation">{gen0}</div>
+        <div className="generation">{gen1}</div>
       </div>
     )
-
     
     return treeJsx
   }

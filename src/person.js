@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 class Person extends Component {
   render () {
-    const { firstName, middleName, lastName, maidenName, prefName, sex, birthYear, birthMonth, birthDay, birthCity, birthState, birthCountry, deathYear, deathMonth, deathDay, deathCity, deathState, deathCountry, generation } = this.props.person
+    const { firstName, middleName, lastName, maidenName, prefName, birthYear, birthMonth, birthDay, birthCity, birthState, birthCountry, deathYear, deathMonth, deathDay, deathCity, deathState, deathCountry, photo } = this.props.person
     
     let firstMiddle, last
 
@@ -22,6 +22,7 @@ class Person extends Component {
 
     return (
       <div className="person-profile">
+        <img title={prefName} alt={prefName} src={photo}></img>
         <h2>{prefName} {lastName}</h2>
         <h5>born: {birthName}</h5>
         <p>b. {birthMonth}/{birthDay}/{birthYear} - {birthCity}, {birthState}, {birthCountry}</p>

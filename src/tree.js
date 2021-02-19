@@ -1,22 +1,35 @@
 import React, { Component } from 'react'
+import data from './data'
 import Person from './person'
 
 
 
 
 class Tree extends Component {
+  constructor () {
+    super()
 
+    this.state = {
+      people: []
+    }
+  }
+
+  componentDidMount() {
+    this.setState({
+      people: data,
+    })
+  }
+  
   render () {    
-    
     const gen0 = (
-      this.props.people
+      this.state.people
         .filter(person => person.generation === 0)
         .map(person => <Person key={person.id} person={person} generation={person.generation} />
       )
     )
 
     const gen1 = (
-      this.props.people
+      this.state.people
         .filter(person => person.generation === 1)
         .map(person => <Person key={person.id} person={person} generation={person.generation} />
       )

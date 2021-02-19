@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
-import data from './data'
+import { personIndex } from './api'
 import Person from './person'
-
-
-
 
 class Tree extends Component {
   constructor () {
@@ -15,9 +12,13 @@ class Tree extends Component {
   }
 
   componentDidMount() {
-    this.setState({
-      people: data,
-    })
+    personIndex()
+      .then(res => {
+        this.setState({
+          people: res.data.people,
+        })
+      })
+    
   }
   
   render () {    

@@ -15,10 +15,9 @@ class Tree extends Component {
     personIndex()
       .then(res => {
         this.setState({
-          people: res.data.people,
+          people: Object.values(res.data.people),
         })
       })
-    
   }
   
   render () {    

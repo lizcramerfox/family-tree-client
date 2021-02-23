@@ -1,4 +1,4 @@
-import Tree from './tree';
+import PersonIndex from './PersonIndex';
 import './App.css';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
         <h2>Family Tree</h2>
       </header>
       <main>
-        <Tree />
+        <PersonIndex />
       </main>
     </div>
   )

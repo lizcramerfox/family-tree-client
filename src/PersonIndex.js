@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { personIndex } from './api'
 import PersonPreview from './PersonPreview'
 
-class Tree extends Component {
+class PersonIndex extends Component {
   constructor () {
     super()
 
@@ -46,4 +46,4 @@ class Tree extends Component {
   }
 }
 
-export default Tree
+export default PersonIndex

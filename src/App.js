@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <h1>Family Tree</h1>
       </header>
-      <main>
+      <main className="App-body">
         <PersonIndex />
       </main>
     </div>

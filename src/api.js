@@ -224,3 +224,8 @@ const peopleMap = {
     photo: 'https://i.imgur.com/0KE3oZe.jpg',
   }
 }
+
+export default (
+  personIndex,
+  personShow
+)

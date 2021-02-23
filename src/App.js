@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h2>Family Tree</h2>
+        <h1>Family Tree</h1>
       </header>
       <main>
         <PersonIndex />

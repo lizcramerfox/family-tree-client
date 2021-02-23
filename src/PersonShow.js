@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-// import Redirect from 'react-router-dom'
-// import personShow from './api'
 
 class PersonShow extends Component {
   constructor(props) {
@@ -14,7 +12,6 @@ class PersonShow extends Component {
 
   render () {
     // TODO: make this DRY with PersonPreview
-    console.log(`in PersonShow, this.props = `, this.props)
     const { firstName, middleName, lastName, maidenName, prefName, birthYear, birthMonth, birthDay, birthCity, birthState, birthCountry, deathYear, deathMonth, deathDay, deathCity, deathState, deathCountry, photo } = this.props.person
 
     let firstMiddle, last
@@ -35,8 +32,7 @@ class PersonShow extends Component {
 
     return (
       <div 
-        onRequestClose={this.cancelDelete}
-        className={"person-profile"}
+        className={"person-profile modal"}
       >
         <img title={prefName} alt={prefName} src={photo}></img>
         <h2>{prefName} {lastName}</h2>

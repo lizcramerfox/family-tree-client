@@ -21,7 +21,7 @@ class PersonPreview extends Component {
     const birthName = `${firstMiddle} ${last}`
 
     return (
-      <div className="person-profile">
+      <div className="person-preview">
         <img title={prefName} alt={prefName} src={photo}></img>
         <h2>{prefName} {lastName}</h2>
         <h5>born: {birthName}</h5>

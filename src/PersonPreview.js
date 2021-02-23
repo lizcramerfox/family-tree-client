@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class Person extends Component {
+class PersonPreview extends Component {
   render () {
     const { firstName, middleName, lastName, maidenName, prefName, birthYear, birthMonth, birthDay, birthCity, birthState, birthCountry, deathYear, deathMonth, deathDay, deathCity, deathState, deathCountry, photo } = this.props.person
     
@@ -32,4 +32,4 @@ class Person extends Component {
   }   
 }
 
-export default Person
+export default PersonPreview

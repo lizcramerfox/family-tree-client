@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { personIndex } from './api'
-import Person from './person'
+import PersonPreview from './PersonPreview'
 
 class Tree extends Component {
   constructor () {
@@ -24,14 +24,14 @@ class Tree extends Component {
     const gen0 = (
       this.state.people
         .filter(person => person.generation === 0)
-        .map(person => <Person key={person.id} person={person} generation={person.generation} />
+        .map(person => <PersonPreview key={person.id} person={person} generation={person.generation} />
       )
     )
 
     const gen1 = (
       this.state.people
         .filter(person => person.generation === 1)
-        .map(person => <Person key={person.id} person={person} generation={person.generation} />
+        .map(person => <PersonPreview key={person.id} person={person} generation={person.generation} />
       )
     )
 

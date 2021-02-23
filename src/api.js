@@ -7,11 +7,14 @@ export function personIndex() {
 }
 
 export function personShow(id) {
-  // make this a Promise
-  return peopleMap()[id]
+  // TODO: make this a Promise
+  return Promise.resolve({
+    data: {
+      person: peopleMap[id]
+    }
+  })
 }
 
-// TODO: make this a constant (change how it's called above)
 const peopleMap = {
   '00-01': {
     id: '00-01',

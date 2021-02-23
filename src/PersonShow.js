@@ -32,14 +32,16 @@ class PersonShow extends Component {
 
     return (
       <div 
-        className={"person-profile modal"}
+        className={"person-profile"}
       >
-        <img title={prefName} alt={prefName} src={photo}></img>
-        <h2>{prefName} {lastName}</h2>
-        <h5>born: {birthName}</h5>
-        <p>b. {birthMonth}/{birthDay}/{birthYear} - {birthCity}, {birthState}, {birthCountry}</p>
-        <p>d. {deathMonth}/{deathDay}/{deathYear} - {deathCity}, {deathState}, {deathCountry}</p>
         <button className="button" onClick={this.props.hideProfile}>Return to Index</button>
+        <div>
+          <img title={prefName} alt={prefName} src={photo}></img>
+          <h2>{prefName} {lastName}</h2>
+          <h5>born: {birthName}</h5>
+          <p>b. {birthMonth}/{birthDay}/{birthYear} - {birthCity}, {birthState}, {birthCountry}</p>
+          <p>d. {deathMonth}/{deathDay}/{deathYear} - {deathCity}, {deathState}, {deathCountry}</p>
+        </div>
       </div>
     )
   }

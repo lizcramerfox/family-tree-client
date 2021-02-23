@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { personIndex } from './api'
 import PersonPreview from './PersonPreview'
 
@@ -36,10 +36,10 @@ class PersonIndex extends Component {
     )
 
     const treeJsx = (
-      <div className="tree">
+      <Fragment>
         <div className="generation">{gen0}</div>
         <div className="generation">{gen1}</div>
-      </div>
+      </Fragment>
     )
     
     return treeJsx

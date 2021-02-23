@@ -1,5 +1,5 @@
 import PersonIndex from './PersonIndex';
-import './App.css';
+import './App.scss';
 
 function App() {
 

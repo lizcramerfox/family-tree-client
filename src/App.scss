@@ -29,6 +29,10 @@ h2 {
     padding: 1rem;
     font-size: 3rem;
   }
+
+  nav {
+    text-align: right;
+  }
 }
 
 .App-body {
@@ -43,7 +47,7 @@ h2 {
 }
 
 .home {
-  margin-top: 5rem;
+  color: #282c34;
 }
 
 .person-preview {

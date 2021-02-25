@@ -2,16 +2,9 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 
 class PersonShow extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      showProfile: false,
-      person: null,
-    }
-  }
 
   render () {
+    console.log(this.props)
     // TODO: make this DRY with PersonPreview
     const { firstName, middleName, lastName, maidenName, prefName, birthYear, birthMonth, birthDay, birthCity, birthState, birthCountry, deathYear, deathMonth, deathDay, deathCity, deathState, deathCountry, photo } = this.props.person
 

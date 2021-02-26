@@ -1,7 +1,7 @@
 export function personIndex() {
   return Promise.resolve({
     data: {
-      people: peopleMap
+      people: Object.values(peopleMap)
     }
   })
 }

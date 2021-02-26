@@ -1,34 +1,25 @@
 import React, { Component, Fragment } from 'react'
-import personShow from './api'
-import PersonShow from './PersonShow'
+import { Link } from 'react-router-dom'
 
 class PersonPreview extends Component {
   constructor() {
     super()
 
     this.state = {
-      showProfile: false,
       person: [],
     }
   }
 
-  showProfile = () => {
-    this.setState({ showProfile: true })
-    personShow(this.props.person.id)
-      .then(res => {
-        this.setState({
-          person: Object.values(res.data.person),
-        })
-      })
+  // hideProfile = () => {
+  //   this.setState({ showProfile: false })
+  // }
 
-  }
+  // onClick = () => {
+  //   console.log(`PersonPreview onClick = `, this.props )
+  //   <PersonShow person={this.props.person} />
+  // } 
 
-  hideProfile = () => {
-    this.setState({ showProfile: false })
-  }
-
-  
-  render () {
+  render() {
     // TODO: make this DRY with PersonShow
     const { firstName, middleName, lastName, maidenName, prefName, birthYear, birthMonth, birthDay, birthCity, birthState, birthCountry, deathYear, deathMonth, deathDay, deathCity, deathState, deathCountry, photo } = this.props.person
     
@@ -47,14 +38,13 @@ class PersonPreview extends Component {
     }
 
     const birthName = `${firstMiddle} ${last}`
-
-    let personJsx
-
-    if (!this.state.showProfile) {
-      personJsx = (
+    
+    let previewJsx 
+    
+    previewJsx = (
+      <Link to={`/profiles/${this.props.person.id}`}>
         <div 
-        className="person-preview"
-        onClick={this.showProfile}
+          className="person-preview"
         >
           <img title={prefName} alt={prefName} src={photo}></img>
           <h2>{prefName} {lastName}</h2>
@@ -62,13 +52,11 @@ class PersonPreview extends Component {
           <p>b. {birthMonth}/{birthDay}/{birthYear} - {birthCity}, {birthState}, {birthCountry}</p>
           <p>d. {deathMonth}/{deathDay}/{deathYear} - {deathCity}, {deathState}, {deathCountry}</p>
         </div>
-      )
-    } else {
-      personJsx = <PersonShow person={this.props.person} hideProfile={this.hideProfile} />
-    }
-
+      </Link>
+    )
+    
     return (
-      <Fragment>{personJsx}</Fragment>
+      <Fragment>{previewJsx}</Fragment>
     )
   }   
 }

@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import { personIndex } from './api'
 import PersonPreview from './PersonPreview'
+import PersonShow from './PersonShow'
 
 class PersonIndex extends Component {
   constructor () {
@@ -11,27 +12,31 @@ class PersonIndex extends Component {
     }
   }
 
+
+
   componentDidMount() {
     personIndex()
       .then(res => {
         this.setState({
-          people: Object.values(res.data.people),
+          people: res.data.people,
         })
       })
   }
   
   render () {    
+    
+
     const gen0 = (
       this.state.people
         .filter(person => person.generation === 0)
-        .map(person => <PersonPreview key={person.id} person={person} generation={person.generation} />
+        .map(person => <PersonPreview key={person.id} person={person} generation={person.generation} onClick={this.onClick}/>
       )
     )
 
     const gen1 = (
       this.state.people
         .filter(person => person.generation === 1)
-        .map(person => <PersonPreview key={person.id} person={person} generation={person.generation} />
+        .map(person => <PersonPreview key={person.id} person={person} generation={person.generation} onClick={this.onClick} />
       )
     )
 

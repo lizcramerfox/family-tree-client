@@ -57,11 +57,11 @@ export function getDeathDate(person) {
 }
 
 export function getBirthPlace(person) {
-  return formatDate(person.birthCity, person.birthState, person.birthYear)
+  return formatPlace(person.birthCity, person.birthState, person.birthYear)
 }
 
 export function getDeathPlace(person) {
-  return formatDate(person.deathCity, person.deathState, person.deathYear)
+  return formatPlace(person.deathCity, person.deathState, person.deathYear)
 }
 
 module.export = {

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import personShow from './api'
+import { getBirthName, formatDate, formatPlace } from './helpers'
 
 class PersonShow extends Component {
   constructor(props) {
@@ -26,24 +27,29 @@ class PersonShow extends Component {
     } 
     
     if (this.state.person) {
-      // TODO: make this DRY with PersonPreview
-      const { firstName, middleName, lastName, maidenName, prefName, birthYear, birthMonth, birthDay, birthCity, birthState, birthCountry, deathYear, deathMonth, deathDay, deathCity, deathState, deathCountry, photo } = this.state.person
-
-      let firstMiddle, last
-  
-      if (middleName === '') {
-        firstMiddle = `${firstName}`
-      } else {
-        firstMiddle = `${firstName} ${middleName}`
-      }
-  
-      if (maidenName === '') {
-        last = `${lastName}`
-      } else {
-        last = `${maidenName}`
-      }
-  
-      const birthName = `${firstMiddle} ${last}`
+      const { 
+        lastName, 
+        prefName, 
+        birthYear, 
+        birthMonth, 
+        birthDay, 
+        birthCity, 
+        birthState, 
+        birthCountry, 
+        deathYear, 
+        deathMonth, 
+        deathDay, 
+        deathCity, 
+        deathState, 
+        deathCountry, 
+        photo 
+      } = this.state.person
+      
+      const birthName = getBirthName(this.state.person)
+      const dob = formatDate(birthDay, birthMonth, birthYear)
+      const pob = formatPlace(birthCity, birthState, birthCountry)
+      const dod = formatDate(deathDay, deathMonth, deathYear)
+      const pod = formatPlace(deathCity, deathState, deathCountry)
 
       return (
         <div 
@@ -54,8 +60,8 @@ class PersonShow extends Component {
             <img title={prefName} alt={prefName} src={photo}></img>
             <h2>{prefName} {lastName}</h2>
             <h5>born: {birthName}</h5>
-            <p>b. {birthMonth}/{birthDay}/{birthYear} - {birthCity}, {birthState}, {birthCountry}</p>
-            <p>d. {deathMonth}/{deathDay}/{deathYear} - {deathCity}, {deathState}, {deathCountry}</p>
+            <p>b. {dob} - {pob}</p>
+            <p>d. {dod} - {pod}</p>
           </div>
         </div>
       )

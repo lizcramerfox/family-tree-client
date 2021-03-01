@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { personIndex } from './api'
 import PersonPreview from './PersonPreview'
-import PersonShow from './PersonShow'
 
 class PersonIndex extends Component {
   constructor () {

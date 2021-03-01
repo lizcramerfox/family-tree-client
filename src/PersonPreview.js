@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { Link } from 'react-router-dom'
-import { getBirthName, formatDate, formatPlace } from './helpers'
+import { getBirthName, getBirthDate, getBirthPlace, getDeathDate, getDeathPlace, } from './helpers'
 
 class PersonPreview extends Component {
   render() {
@@ -11,29 +11,12 @@ class PersonPreview extends Component {
     }
 
     if (this.props.person) {
-      const { 
-        lastName, 
-        prefName, 
-        birthYear, 
-        birthMonth, 
-        birthDay, 
-        birthCity, 
-        birthState, 
-        birthCountry, 
-        deathYear, 
-        deathMonth, 
-        deathDay, 
-        deathCity, 
-        deathState, 
-        deathCountry, 
-        photo 
-      } = this.props.person
-
+      const { lastName, prefName, photo } = this.props.person
       const birthName = getBirthName(this.props.person)
-      const dob = formatDate(birthDay, birthMonth, birthYear)
-      const pob = formatPlace(birthCity, birthState, birthCountry)
-      const dod = formatDate(deathDay, deathMonth, deathYear)
-      const pod = formatPlace(deathCity, deathState, deathCountry)
+      const dob = getBirthDate(this.props.person)
+      const pob = getBirthPlace(this.props.person)
+      const dod = getDeathDate(this.props.person)
+      const pod = getDeathPlace(this.props.person)
       
       previewJsx = (
         <Link to={`/profiles/${this.props.person.id}`}>

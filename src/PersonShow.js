@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import personShow from './api'
-import { getBirthName, formatDate, formatPlace } from './helpers'
+import { getBirthName, getBirthDate, getBirthPlace, getDeathDate, getDeathPlace, } from './helpers'
 
 class PersonShow extends Component {
   constructor(props) {
@@ -27,29 +27,12 @@ class PersonShow extends Component {
     } 
     
     if (this.state.person) {
-      const { 
-        lastName, 
-        prefName, 
-        birthYear, 
-        birthMonth, 
-        birthDay, 
-        birthCity, 
-        birthState, 
-        birthCountry, 
-        deathYear, 
-        deathMonth, 
-        deathDay, 
-        deathCity, 
-        deathState, 
-        deathCountry, 
-        photo 
-      } = this.state.person
-      
+      const { lastName, prefName, photo } = this.state.person
       const birthName = getBirthName(this.state.person)
-      const dob = formatDate(birthDay, birthMonth, birthYear)
-      const pob = formatPlace(birthCity, birthState, birthCountry)
-      const dod = formatDate(deathDay, deathMonth, deathYear)
-      const pod = formatPlace(deathCity, deathState, deathCountry)
+      const dob = getBirthDate(this.state.person)
+      const pob = getBirthPlace(this.state.person)
+      const dod = getDeathDate(this.state.person)
+      const pod = getDeathPlace(this.state.person)
 
       return (
         <div 

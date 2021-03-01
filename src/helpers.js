@@ -30,7 +30,7 @@ export function formatPlace(city, state, country) {
   return place
 }
 
-export function getBirthName(person) {
+export function formatBirthName(person) {
   let firstMiddle, last
 
   if (person.middleName === '') {
@@ -48,28 +48,28 @@ export function getBirthName(person) {
   return `${firstMiddle} ${last}`
 } 
 
-export function getBirthDate(person) {
+export function formatBirthDate(person) {
   return formatDate(person.birthDay, person.birthMonth, person.birthYear)
 }
 
-export function getDeathDate(person) {
+export function formatDeathDate(person) {
   return formatDate(person.deathDay, person.deathMonth, person.deathYear)
 }
 
-export function getBirthPlace(person) {
+export function formatBirthPlace(person) {
   return formatPlace(person.birthCity, person.birthState, person.birthYear)
 }
 
-export function getDeathPlace(person) {
+export function formatDeathPlace(person) {
   return formatPlace(person.deathCity, person.deathState, person.deathYear)
 }
 
 module.export = {
-  getBirthName,
-  getBirthDate,
-  getBirthPlace,
-  getDeathDate,
-  getDeathPlace,
+  formatBirthName,
+  formatBirthDate,
+  formatBirthPlace,
+  formatDeathDate,
+  formatDeathPlace,
 }
 
 

@@ -1,10 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
 a {
-  color: purple;
   text-decoration: none;
 }
 
 h2 {
   color: lightblue;
+  font-family: 'Crimson Pro', serif;
 }
 
 .App {
@@ -20,8 +27,7 @@ h2 {
 
 .App-header {
   grid-area: 1 / 1 / 2 / 2;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   position: fixed;
   width: 100%;
   top: 0;
@@ -30,9 +36,11 @@ h2 {
 
   h1 {
     background-color: #282c34;
+    font-family: 'Crimson Pro', serif;
+    font-size: 3rem;
+    font-variant: small-caps;
     margin: 0;
     padding: 1rem;
-    font-size: 3rem;
   }
 
   nav {
@@ -84,11 +92,8 @@ h2 {
 }
 
 .person-profile {
-  position: fixed;
-  top: 5rem;
+  top: 1rem;
   z-index: 1; 
-  width: 100vw;
-  min-height: 100vh;
   background-color: #282c34;
   padding: 2rem;
 

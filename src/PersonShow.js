@@ -35,10 +35,7 @@ class PersonShow extends Component {
       const pod = formatDeathPlace(this.state.person)
 
       return (
-        <div 
-          className={"person-profile"}
-        >
-          
+        <div className={"person-profile"}>
           <div>
             <img title={prefName} alt={prefName} src={photo}></img>
             <h2>{prefName} {lastName}</h2>

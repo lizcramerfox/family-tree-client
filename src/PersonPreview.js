@@ -19,17 +19,17 @@ class PersonPreview extends Component {
       const pod = formatDeathPlace(this.props.person)
       
       previewJsx = (
-        <Link to={`/profiles/${this.props.person.id}`}>
-          <div className="person-preview">
+        <div className="person-preview">
+          <Link to={`/profiles/${this.props.person.id}`}>
             <img title={prefName} alt={prefName} src={photo}></img>
             <h2>{prefName} {lastName}</h2>
             <h5>born: {birthName}</h5>
             <p>b. {dob} - {pob}</p>
             <p>d. {dod} - {pod}</p>
-          </div>
-        </Link>
-      )
-    }
+          </Link>
+        </div>
+    )
+  }
     
     return <Fragment>{previewJsx}</Fragment>
   }

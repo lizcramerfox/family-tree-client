@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { withRouter } from 'react-router-dom'
+import { withRouter, Link } from 'react-router-dom'
 import personShow from './api'
-import { getBirthName, getBirthDate, getBirthPlace, getDeathDate, getDeathPlace, } from './helpers'
+import { getBirthName, getBirthDate, getBirthPlace, getDeathDate, getDeathPlace } from './helpers'
 
 class PersonShow extends Component {
   constructor(props) {
@@ -38,13 +38,16 @@ class PersonShow extends Component {
         <div 
           className={"person-profile"}
         >
-          <button className="button">Return to Index</button>
+          
           <div>
             <img title={prefName} alt={prefName} src={photo}></img>
             <h2>{prefName} {lastName}</h2>
             <h5>born: {birthName}</h5>
             <p>b. {dob} - {pob}</p>
             <p>d. {dod} - {pod}</p>
+            <Link to={"/index"}>
+              <button>Return to Index</button>
+            </Link>
           </div>
         </div>
       )

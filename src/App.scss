@@ -37,6 +37,18 @@ h2 {
 
   nav {
     text-align: right;
+    position: absolute;
+    top: .2rem;
+    right: 1rem;
+
+    a {
+      color: lightcoral;
+      font-weight: 600;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
 

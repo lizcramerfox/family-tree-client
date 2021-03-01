@@ -1,6 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pompiere&display=swap');
 
+$font-body: 'Montserrat', sans-serif;
+$font-title: 'Pompiere', serif;
+
+$dark-blue: #264653;
+$teal: #2A9D8F;
+$yellow: #E9C46A;
+$tan: #F4A261;
+$orange: #E76F51;
+$white: #FBDEC6;
+
 body {
   font-family: 'Montserrat', sans-serif;
 }
@@ -10,8 +20,8 @@ a {
 }
 
 h2 {
-  color: lightblue;
-  font-family: 'Pompiere', serif;
+  color: $teal;
+  font-family: $font-title;
 }
 
 .App {
@@ -19,7 +29,7 @@ h2 {
   width: 100vw;
   text-align: center;
   font-size: 16px;
-  color: lightgrey;
+  color: $yellow;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
@@ -32,11 +42,11 @@ h2 {
   width: 100%;
   top: 0;
   z-index: 2;
-  color: white;
+  color: $white;
 
   h1 {
-    background-color: #282c34;
-    font-family: 'Pompiere', serif;
+    background-color: $dark-blue;
+    font-family: $font-title;
     font-size: 3rem;
     font-variant: small-caps;
     margin: 0;
@@ -50,7 +60,7 @@ h2 {
     right: 1rem;
 
     a {
-      color: lightcoral;
+      color: $orange;
       font-weight: 600;
 
       &:hover {
@@ -76,8 +86,8 @@ h2 {
 }
 
 .person-preview {
-  background: #282c34;
-  color: white;
+  background: $dark-blue;
+  color: $white;
   padding: 2rem 1rem;
   margin: 2rem 1rem;
   width: 20vw;
@@ -87,14 +97,14 @@ h2 {
   }
 
   a {
-    color: white;
+    color: $white;
   }
 }
 
 .person-profile {
   top: 1rem;
   z-index: 1; 
-  background-color: #282c34;
+  background-color: $dark-blue;
   padding: 2rem;
 
   button {

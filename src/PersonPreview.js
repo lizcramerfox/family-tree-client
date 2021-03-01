@@ -2,22 +2,15 @@ import React, { Component, Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import { getBirthName, formatDate, formatPlace } from './helpers'
 
-
 class PersonPreview extends Component {
-  constructor() {
-    super()
-
-    this.state = {
-      person: [],
-    }
-  }
-
   render() {
-    if (!this.state.person) {
-      return <p>"Loading..."</p>
+    let previewJsx 
+
+    if (!this.props.person) {
+      previewJsx = <p>"Loading..."</p>
     }
-    
-    if (this.state.person) {
+
+    if (this.props.person) {
       const { 
         lastName, 
         prefName, 
@@ -34,21 +27,17 @@ class PersonPreview extends Component {
         deathState, 
         deathCountry, 
         photo 
-      } = this.state.person
-      
-      const birthName = getBirthName(this.state.person)
+      } = this.props.person
+
+      const birthName = getBirthName(this.props.person)
       const dob = formatDate(birthDay, birthMonth, birthYear)
       const pob = formatPlace(birthCity, birthState, birthCountry)
       const dod = formatDate(deathDay, deathMonth, deathYear)
       const pod = formatPlace(deathCity, deathState, deathCountry)
-
-      let previewJsx
       
       previewJsx = (
         <Link to={`/profiles/${this.props.person.id}`}>
-          <div 
-            className="person-preview"
-          >
+          <div className="person-preview">
             <img title={prefName} alt={prefName} src={photo}></img>
             <h2>{prefName} {lastName}</h2>
             <h5>born: {birthName}</h5>
@@ -57,12 +46,10 @@ class PersonPreview extends Component {
           </div>
         </Link>
       )
-    
-      return (
-        <Fragment>{previewJsx}</Fragment>
-      )
     }
-  }   
+    
+    return <Fragment>{previewJsx}</Fragment>
+  }
 }
 
 export default PersonPreview

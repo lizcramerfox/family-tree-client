@@ -7,8 +7,8 @@ class Header extends Component {
       <div className="App-header">
         <h1>Family Tree</h1>
         <nav>
-          <ul><Link to="/">Home</Link></ul>
-          <ul><Link to="/index">Index</Link></ul>  
+          <Link to="/">Home</Link>
+          <Link to="/index">Index</Link> 
         </nav>
       </div>
     )

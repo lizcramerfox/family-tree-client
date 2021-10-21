@@ -11,6 +11,11 @@ $tan: #F4A261;
 $orange: #E76F51;
 $white: #FBDEC6;
 
+html {
+  font-size: 14px;
+  width: 100vw;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
 }
@@ -19,27 +24,30 @@ a {
   text-decoration: none;
 }
 
+header {
+  height: 4rem;
+}
+
+main {
+  margin-top: 6rem;
+}
+
 h2 {
   color: $teal;
   font-family: $font-title;
+  font-size: 1.3rem;
 }
 
 .App {
-  height: 100vh;
-  width: 100vw;
   text-align: center;
-  font-size: 16px;
   color: $yellow;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
+  width: 100vw;
 }
 
-.App-header {
-  grid-area: 1 / 1 / 2 / 2;
+header {
   text-align: center;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   top: 0;
   z-index: 2;
   color: $white;
@@ -50,16 +58,17 @@ h2 {
     font-size: 3rem;
     font-variant: small-caps;
     margin: 0;
-    padding: 1rem;
+    padding: 1rem 0;
   }
 
   nav {
     text-align: right;
     position: absolute;
-    top: .2rem;
-    right: 1rem;
+    top: 1rem;
+    right: 2rem;
 
     a {
+      display: block;
       color: $orange;
       font-weight: 600;
 
@@ -71,13 +80,13 @@ h2 {
 }
 
 .App-body {
-  width: 100vw;
-  margin-top: 5rem;
-  grid-area: 2 / 1 / 3 / 2;
+  position: relative;
+  top: 0;
 }
 
 .generation {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -90,7 +99,15 @@ h2 {
   color: $white;
   padding: 2rem 1rem;
   margin: 2rem 1rem;
-  width: 20vw;
+  
+
+  a {
+    img {
+      object-fit: scale-down;
+      max-width: 5rem;
+    }
+  }
+
 
   &:hover  {
     cursor: pointer;
@@ -102,6 +119,7 @@ h2 {
 }
 
 .person-profile {
+  position: relative;
   top: 1rem;
   z-index: 1; 
   background-color: $dark-blue;
